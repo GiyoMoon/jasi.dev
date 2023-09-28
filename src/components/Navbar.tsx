@@ -16,7 +16,7 @@ const Navbar: VoidComponent = () => {
             activeClass='bg-purple-200 text-purple-900'
             end
           >
-            Home
+            About
           </A>
           <A
             href='/blog'

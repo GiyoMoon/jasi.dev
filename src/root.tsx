@@ -27,7 +27,7 @@ export default function Root() {
           <Suspense>
             <main class='mx-auto max-w-3xl px-2 pt-20 md:px-0'>
               <Navbar />
-              <div class='prose'>
+              <div class='prose max-w-none'>
                 <Routes>
                   <FileRoutes />
                 </Routes>

@@ -1,4 +1,5 @@
 import solid from 'solid-start/vite'
+import vercel from 'solid-start-vercel'
 import { defineConfig } from 'vite'
 import eslint from 'vite-plugin-eslint'
 
@@ -13,6 +14,7 @@ export default defineConfig({
       enforce: 'pre',
     },
     solid({
+      adapter: vercel({ edge: true }),
       extensions: ['.mdx', '.md'],
     }),
     eslint(),

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Onest';
+  src: url('./assets/fonts/Onest-VariableFont_wght.ttf');
+  font-display: swap;
+}

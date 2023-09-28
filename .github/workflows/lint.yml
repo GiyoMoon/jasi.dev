@@ -1,0 +1,12 @@
+name: lint
+run-name: Lint
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+jobs:
+  lint:
+    uses: giyomoon/workflows/.github/workflows/js-lint.yml@main

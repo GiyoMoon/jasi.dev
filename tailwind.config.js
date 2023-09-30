@@ -2,7 +2,8 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{ts,tsx}'],
+  content: ['./src/**/*.{ts,tsx,md,mdx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {

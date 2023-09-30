@@ -8,8 +8,8 @@ export const Github = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 98 96'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       fill='currentColor'
       {...props}
@@ -32,8 +32,8 @@ export const LinkedIn = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 72 72'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       fill='currentColor'
       {...props}
@@ -62,8 +62,8 @@ export const X = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 240 240'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       fill='currentColor'
       {...props}
@@ -93,8 +93,8 @@ export const SolidJS = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 166 155.3'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       fill='currentColor'
       {...props}
@@ -185,8 +185,8 @@ export const Rust = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 105 105'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       fill='currentColor'
       {...props}
@@ -217,8 +217,8 @@ export const React = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='-10.5 -9.45 21 18.9'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       fill='none'
       {...props}
@@ -241,8 +241,8 @@ export const NextJS = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 180 180'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       fill='none'
       {...props}
@@ -309,8 +309,8 @@ export const Moon = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 256 256'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       {...props}
     >
@@ -335,8 +335,8 @@ export const Sun = (
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 256 256'
       style={{
-        height: props.size,
-        width: props.size,
+        height: `${props.size}px`,
+        width: `${props.size}px`,
       }}
       {...props}
     >

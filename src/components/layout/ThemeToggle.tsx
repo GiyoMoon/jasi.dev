@@ -63,7 +63,7 @@ const ThemeToggle: VoidComponent = () => {
         class='rounded px-2 py-1 outline-none dark:hidden'
         onClick={() => setCurrentTheme('dark')}
       >
-        <Sun size='20' />
+        <Moon size='20' />
       </button>
       <button
         type='button'
@@ -71,7 +71,7 @@ const ThemeToggle: VoidComponent = () => {
         class='hidden rounded px-2 py-1 outline-none dark:block'
         onClick={() => setCurrentTheme('light')}
       >
-        <Moon size='20' />
+        <Sun size='20' />
       </button>
     </>
   )

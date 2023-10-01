@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  vite-plugin-inspect: 0.7.38
+
 devDependencies:
   '@mdx-js/rollup':
     specifier: ^2.3.0
@@ -5667,7 +5670,7 @@ packages:
       terser: 5.20.0
       undici: 5.25.3
       vite: 4.4.9
-      vite-plugin-inspect: 0.7.39(rollup@3.29.4)(vite@4.4.9)
+      vite-plugin-inspect: 0.7.38(rollup@3.29.4)(vite@4.4.9)
       vite-plugin-solid: 2.7.0(solid-js@1.7.12)(vite@4.4.9)
       wait-on: 6.0.1(debug@4.3.4)
     transitivePeerDependencies:
@@ -6211,8 +6214,8 @@ packages:
       vite: 4.4.9
     dev: true
 
-  /vite-plugin-inspect@0.7.39(rollup@3.29.4)(vite@4.4.9):
-    resolution: {integrity: sha512-iVQccBPqeukeWoN0WnkvIoj58kUiYKMZAs6Jy8/bzhtDByB239y8KnJKIwGD9O3d4LcksdE91T2H2bKWAYiqQg==}
+  /vite-plugin-inspect@0.7.38(rollup@3.29.4)(vite@4.4.9):
+    resolution: {integrity: sha512-+p6pJVtBOLGv+RBrcKAFUdx+euizg0bjL35HhPyM0MjtKlqoC5V9xkCmO9Ctc8JrTyXqODbHqiLWJKumu5zJ7g==}
     engines: {node: '>=14'}
     peerDependencies:
       '@nuxt/kit': '*'

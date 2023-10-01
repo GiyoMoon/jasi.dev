@@ -35,5 +35,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "resolutions": {
+    "vite-plugin-inspect": "0.7.38"
   }
 }

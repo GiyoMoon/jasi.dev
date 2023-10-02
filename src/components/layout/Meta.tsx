@@ -1,4 +1,4 @@
-import { Head, Meta, Title } from 'solid-start'
+import { Meta, Title } from 'solid-start'
 import type { VoidComponent } from 'solid-js'
 
 const MetaComponent: VoidComponent<{
@@ -8,7 +8,7 @@ const MetaComponent: VoidComponent<{
   image?: string
 }> = (props) => {
   return (
-    <Head>
+    <>
       <Title>{props.title}</Title>
       <Meta name='description' content={props.description} />
 
@@ -29,7 +29,7 @@ const MetaComponent: VoidComponent<{
       {props.image && (
         <Meta name='twitter:image' content={`https://jasi.dev${props.image}`} />
       )}
-    </Head>
+    </>
   )
 }
 

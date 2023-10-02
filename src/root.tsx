@@ -9,16 +9,9 @@ import {
   Meta,
   Routes,
   Scripts,
-  Title,
 } from 'solid-start'
 import './root.css'
 import Navbar from '~/components/layout/Navbar'
-
-const META = {
-  title: 'Jasmin',
-  description: 'Software developer from Bern, Switzerland',
-  url: 'https://jasi.dev',
-}
 
 export default function Root() {
   return (
@@ -26,23 +19,8 @@ export default function Root() {
       <Head>
         <Meta charset='utf-8' />
         <Meta name='viewport' content='width=device-width, initial-scale=1' />
-
-        <Title>{META.title}</Title>
-        <Meta name='description' content={META.description} />
-
-        <Meta name='og:type' content='website' />
-        <Meta name='og:locale' content='en_US' />
-        <Meta name='og:title' content={META.title} />
-        <Meta name='og:site_name' content={META.title} />
-        <Meta name='og:description' content={META.description} />
-        <Meta name='og:url' content={META.url} />
-
-        <Meta name='twitter:card' content='summary' />
-        <Meta name='twitter:title' content={META.title} />
-        <Meta name='twitter:description' content={META.description} />
-        <Meta name='twitter:url' content={META.url} />
       </Head>
-      <Body class='dark:bg-neutral-950 dark:text-white'>
+      <Body class='dark:bg-neutral-900 dark:text-white'>
         <ErrorBoundary>
           <Suspense>
             <main class='mx-auto max-w-3xl px-5 pt-10 md:px-0'>

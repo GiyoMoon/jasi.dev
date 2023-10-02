@@ -3,8 +3,11 @@ import { Moon, Sun } from '~/components/icons'
 
 type Theme = 'light' | 'dark' | 'system'
 
+const systemIsDark = () =>
+  window.matchMedia('(prefers-color-scheme: dark)').matches
+
 const ThemeToggle: VoidComponent = () => {
-  const [currentTheme, setCurrentTheme] = createSignal<Theme | null>(null)
+  const [currentTheme, setCurrentTheme] = createSignal<Theme>('system')
 
   createEffect(() => {
     setCurrentTheme(getInitialTheme())
@@ -57,22 +60,58 @@ const ThemeToggle: VoidComponent = () => {
 
   return (
     <>
-      <button
-        type='button'
-        aria-label='Switch to dark theme'
-        class='rounded px-2 py-1 outline-none dark:hidden'
-        onClick={() => setCurrentTheme('dark')}
-      >
-        <Moon size='20' />
-      </button>
-      <button
-        type='button'
-        aria-label='Switch to light theme'
-        class='hidden rounded px-2 py-1 outline-none dark:block'
-        onClick={() => setCurrentTheme('light')}
-      >
-        <Sun size='20' />
-      </button>
+      {currentTheme() === 'system' && (
+        <>
+          <button
+            type='button'
+            aria-label='Switch to dark theme'
+            class='rounded px-2 py-1 outline-none dark:hidden'
+            onClick={() => setCurrentTheme('dark')}
+          >
+            <Moon size='20' />
+          </button>
+          <button
+            type='button'
+            aria-label='Switch to light theme'
+            class='hidden rounded px-2 py-1 outline-none dark:block'
+            onClick={() => setCurrentTheme('light')}
+          >
+            <Sun size='20' />
+          </button>
+        </>
+      )}
+      {currentTheme() !== 'system' && (
+        <>
+          <button
+            type='button'
+            aria-label='Switch to dark theme'
+            class='rounded px-2 py-1 outline-none dark:hidden'
+            onClick={() => {
+              if (systemIsDark()) {
+                setCurrentTheme('dark')
+              } else {
+                setCurrentTheme('system')
+              }
+            }}
+          >
+            <Moon size='20' class='text-fuchsia-600' />
+          </button>
+          <button
+            type='button'
+            aria-label='Switch to light theme'
+            class='hidden rounded px-2 py-1 outline-none dark:block'
+            onClick={() => {
+              if (systemIsDark()) {
+                setCurrentTheme('system')
+              } else {
+                setCurrentTheme('light')
+              }
+            }}
+          >
+            <Sun size='20' class='text-fuchsia-400' />
+          </button>
+        </>
+      )}
     </>
   )
 }
@@ -92,8 +131,7 @@ function getInitialTheme(): Theme {
 function update() {
   if (
     localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
+    (!('theme' in localStorage) && systemIsDark())
   ) {
     document.documentElement.classList.add('dark')
   } else {

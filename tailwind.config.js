@@ -12,6 +12,9 @@ export default {
       typography: {
         DEFAULT: {
           css: {
+            p: {
+              fontWeight: '500',
+            },
             h1: {
               fontSize: '24px',
               fontWeight: '900',

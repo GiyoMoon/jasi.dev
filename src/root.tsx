@@ -19,6 +19,11 @@ export default function Root() {
       <Head>
         <Meta charset='utf-8' />
         <Meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Onest:wght@500..900&display=swap'
+          rel='stylesheet'
+          crossorigin='anonymous'
+        />
       </Head>
       <Body class='dark:bg-neutral-900 dark:text-white'>
         <ErrorBoundary>
